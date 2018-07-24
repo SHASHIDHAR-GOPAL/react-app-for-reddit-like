@@ -11,3 +11,30 @@
     color: #af1b1b;
     text-decoration: none;
 }
+
+#main-content {
+    font-size: large;
+    padding: 40px 60px 30px 60px;
+}
+
+#main-content a {
+    padding: 1em;
+    color: #0005bc;
+}
+
+#main-content a:hover{
+    color: #000561;
+    text-decoration: none;
+}
+
+#content {
+    padding-left: 1.5em;
+    font-size: small;
+    float: none;
+    font-style: oblique;
+    color: grey;
+}
+
+#content:hover{
+    text-decoration: none;
+}
