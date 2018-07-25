@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Home from "./components/home.jsx";
-import Links from "./components/links.jsx";
 import 'bootstrap/dist/css/bootstrap.css';
+import Links from './components/links';
 import {
     BrowserRouter as Router,
     Route,
@@ -18,9 +17,9 @@ class App extends Component {
         <Router>
             <Switch>
                 <div>
-                    <Route path={"/"} exact={true} component={Home}/>
-                    <Route path={'/links/natgeo-twitter'} exact={true} component={NatgeoTwitter}/>
+                    <Route path={"/"} exact={true} component={Links}/>
                     <Route path={"/links"} exact={true} component={Links}/>
+                    <Route path={'/links/natgeo-twitter'} exact={true} component={NatgeoTwitter}/>
                 </div>
             </Switch>
         </Router>
