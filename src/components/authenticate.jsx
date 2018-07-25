@@ -4,52 +4,50 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 const Authenticate = (props) => {
 
-    const responseGoogle = (response) => {
-        console.log(response);
-    };
-
-    const userNotSignedIn = () => {
+    const userNotLoggedIn = () => {
         return (
             <div className={"navbar-nav ml-auto"} style={{paddingRight: 50}}>
                 <GoogleLogin
                     clientId="498131561355-sdnlg1nequidq5dru7u8e4ci1llcikqr.apps.googleusercontent.com"
                     className={"btn btn-sm btn-dark"}
                     buttonText="Login with Google"
-                    onSuccess={{onLoginSuccess}}
-                    onFailure={{onLoginFailure}}
+                    onSuccess={onLoginSuccess}
+                    onFailure=""
                 />
             </div>
         );
     };
 
-    const userSignedIn = () => {
+    const userLoggedIn = () => {
         return (
             <div className={"navbar-nav ml-auto"}>
                 <GoogleLogout
                     className={"btn btn-sm btn-light"}
                     buttonText="Logout"
-                    onLogoutSuccess={responseGoogle}
+                    onLogoutSuccess={onLogoutSuccess}
                 />
             </div>
         );
     };
 
     const onLoginSuccess = () => {
+        alert("Login via Google was successful!");
         return(
-            <div className={"alert alert-success alert-dismissible fade show"} role={"alert"}>Login via Google was successful!</div>
+            props.handleLogin
         );
     };
 
-    const onLoginFailure = () => {
+    const onLogoutSuccess = () => {
+        alert("Logout was successful");
         return(
-            <div className={"alert alert-danger alert-dismissible fade show"} role={"alert"}>Login failed!</div>
+            props.handleLogout
         );
     };
 
-    if (props.isUserSignedIn) {
-        return (userSignedIn());
+    if (props.isUserLoggedIn) {
+        return (userLoggedIn());
     }
-    return (userNotSignedIn());
+    return (userNotLoggedIn());
 };
 
 export default Authenticate;

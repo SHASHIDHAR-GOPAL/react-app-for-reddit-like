@@ -6,18 +6,18 @@ class Header extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isUserSignedIn: false,
+            isUserLoggedIn: false,
         };
-        this.handleSignIn = this.handleSignIn.bind(this);
-        this.handleSignOut = this.handleSignOut.bind(this);
+        this.handleLogin = this.handleLogin.bind(this);
+        this.handleLogout = this.handleLogout.bind(this);
     }
 
-    handleSignIn() {
-        this.setState({isUserSignedIn: true});
+    handleLogin() {
+        this.setState({isUserLoggedIn: true});
     }
 
-    handleSignOut() {
-        this.setState({isUserSignedIn: false});
+    handleLogout() {
+        this.setState({isUserLoggedIn: false});
     }
 
     render() {
@@ -25,8 +25,8 @@ class Header extends React.Component {
             <div>
                 <div className={"navbar navbar-expand-lg navbar-light bg-light"}>
                     <Logo name="chirp"/>
-                    <Authenticate handleSignIn={this.handleSignIn} handleSignOut={this.handleSignOut}
-                                  isUserSignedIn={this.state.isUserSignedIn}/>
+                    <Authenticate handleLogin={this.handleLogin} handleLogout={this.handleLogout}
+                                  isUserLoggedIn={this.state.isUserLoggedIn}/>
                 </div>
             </div>
         );
