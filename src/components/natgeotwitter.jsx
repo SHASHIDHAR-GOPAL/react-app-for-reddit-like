@@ -1,13 +1,7 @@
 import React from 'react';
 import Header from './header';
 import 'bootstrap/dist/css/bootstrap.css';
-import {
-    BrowserRouter as Router,
-    Route,
-    Link,
-    Switch,
-    Redirect
-} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import Vote from "./votes";
 
 const NatgeoTwitter = () => {

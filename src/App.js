@@ -6,10 +6,7 @@ import NatgeoTwitter from "./components/natgeotwitter";
 import {
     BrowserRouter as Router,
     Route,
-    Link,
-    Switch,
-    Redirect
-} from 'react-router-dom';
+    Switch} from 'react-router-dom';
 
 class App extends Component {
     render() {

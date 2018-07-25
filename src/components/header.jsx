@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from "./logo";
-import Login from "./login"
+import Authenticate from "./authenticate"
 
 class Header extends React.Component {
     constructor(props) {
@@ -25,8 +25,8 @@ class Header extends React.Component {
             <div>
                 <div className={"navbar navbar-expand-lg navbar-light bg-light"}>
                     <Logo name="chirp"/>
-                    <Login handleSignIn={this.handleSignIn} handleSignOut={this.handleSignOut}
-                           isUserSignedIn={this.state.isUserSignedIn}/>
+                    <Authenticate handleSignIn={this.handleSignIn} handleSignOut={this.handleSignOut}
+                                  isUserSignedIn={this.state.isUserSignedIn}/>
                 </div>
             </div>
         );

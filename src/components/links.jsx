@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-    BrowserRouter as Router,
-    Route,
-    Link,
-    Switch,
-    Redirect
-} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import Header from "./header";
 
 const Links = () => {
