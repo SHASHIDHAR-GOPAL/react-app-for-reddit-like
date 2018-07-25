@@ -6,12 +6,12 @@ import {
     Switch,
     Redirect
 } from 'react-router-dom';
-import Home from "./home";
+import Header from "./header";
 
 const Links = () => {
-    return(
+    return (
         <div>
-            <Home/>
+            <Header/>
             <div id="main-content" className="container">
                 <Link to={'/links/natgeo-twitter'}>Nat Geo - Twitter</Link>
                 <div id="content" className="col-md-9 center-block">Submitted by Ken</div>

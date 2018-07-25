@@ -3,27 +3,27 @@ import React from 'react'
 const Login = (props) => {
 
     const userNotSignedIn = () => {
-        return(
+        return (
             <div className={"navbar-nav ml-auto"}>
-                <a className={"nav-link"} onClick={props.handleSignIn} > Sign up </a>
-                <a className={"nav-link"} onClick={props.handleSignIn} > Sign in </a>
+                <a className={"nav-link"} onClick={props.handleSignIn}> Sign up </a>
+                <a className={"nav-link"} onClick={props.handleSignIn}> Sign in </a>
             </div>
         );
     };
 
     const userSignedIn = () => {
-        return(
+        return (
             <div className={"navbar-nav ml-auto"}>
-                <a className={"nav-link"} > Submit Link </a>
-                <a className={"nav-link"} onClick={props.handleSignOut} > Sign out </a>
+                <a className={"nav-link"}> Submit Link </a>
+                <a className={"nav-link"} onClick={props.handleSignOut}> Sign out </a>
             </div>
         );
     };
 
-    if(props.isUserSignedIn){
-        return(userSignedIn());
+    if (props.isUserSignedIn) {
+        return (userSignedIn());
     }
-    return(userNotSignedIn());
+    return (userNotSignedIn());
 };
 
 export default Login;

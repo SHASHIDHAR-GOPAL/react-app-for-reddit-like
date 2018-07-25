@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from './home';
+import Header from './header';
 import 'bootstrap/dist/css/bootstrap.css';
 import {
     BrowserRouter as Router,
@@ -12,14 +12,14 @@ import Vote from "./votes";
 
 const NatgeoTwitter = () => {
 
-    function copy(){
+    function copy() {
         window.getSelection().selectAllChildren(document.getElementById("link-share"));
         document.execCommand("copy");
     }
 
-    return(
+    return (
         <div>
-            <Home/>
+            <Header/>
             <div id="main-content" className="container">
                 <Link to={'/links/natgeo-twitter'}>Nat Geo - Twitter</Link>
                 <div id="content" className="col-md-9 center-block"><b>Submitted by Ken</b></div>
@@ -32,7 +32,7 @@ const NatgeoTwitter = () => {
             </div>
             <hr className={"container"}/>
         </div>
-  );
+    );
 };
 
 export default NatgeoTwitter;

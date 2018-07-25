@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from "./logo";
 import Login from "./login"
 
-class Home extends React.Component{
+class Header extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -16,20 +16,21 @@ class Home extends React.Component{
         this.setState({isUserSignedIn: true});
     }
 
-    handleSignOut(){
+    handleSignOut() {
         this.setState({isUserSignedIn: false});
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <div>
                 <div className={"navbar navbar-expand-lg navbar-light bg-light"}>
                     <Logo name="chirp"/>
-                    <Login handleSignIn={this.handleSignIn} handleSignOut={this.handleSignOut} isUserSignedIn={this.state.isUserSignedIn}/>
+                    <Login handleSignIn={this.handleSignIn} handleSignOut={this.handleSignOut}
+                           isUserSignedIn={this.state.isUserSignedIn}/>
                 </div>
             </div>
         );
     };
 }
 
-export default Home;
+export default Header;
