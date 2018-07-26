@@ -7,7 +7,7 @@
     color: #c9302c;
 }
 
-.logo:hover{
+.logo:hover {
     color: #af1b1b;
     text-decoration: none;
 }
@@ -22,7 +22,7 @@
     color: #0005bc;
 }
 
-#main-content a:hover{
+#main-content a:hover {
     color: #000561;
     text-decoration: none;
 }
@@ -35,6 +35,6 @@
     color: grey;
 }
 
-#content:hover{
+#content:hover {
     text-decoration: none;
 }

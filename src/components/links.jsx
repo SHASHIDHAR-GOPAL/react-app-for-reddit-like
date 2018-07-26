@@ -1,17 +1,9 @@
 import React from 'react';
-import {
-    BrowserRouter as Router,
-    Route,
-    Link,
-    Switch,
-    Redirect
-} from 'react-router-dom';
-import Home from "./home";
+import {Link} from 'react-router-dom';
 
 const Links = () => {
-    return(
+    return (
         <div>
-            <Home/>
             <div id="main-content" className="container">
                 <Link to={'/links/natgeo-twitter'}>Nat Geo - Twitter</Link>
                 <div id="content" className="col-md-9 center-block">Submitted by Ken</div>
