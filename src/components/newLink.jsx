@@ -19,7 +19,7 @@ const NewLink = () => {
           <label>Link URL</label>
           <input id="link-url" type="url" className="form-control form-control-sm" placeholder="Enter URL of the link"/>
         </div>
-        <Link to={"/links/natgeo-twitter"} className="btn btn-primary btn-sm" onClick={getLink} link_name={getLink.link_name}>Submit</Link>
+        <Link to={"/links"} className="btn btn-primary btn-sm" onClick={getLink} link_name={getLink.link_name}>Submit</Link>
       </form>
   );
 };
