@@ -8,6 +8,7 @@ import {
     Switch,
     Redirect
 } from 'react-router-dom';
+import Vote from "./votes";
 
 const NatgeoTwitter = () => {
 
@@ -26,6 +27,7 @@ const NatgeoTwitter = () => {
                     <div id={"link-share"}>https://twitter.com/NatGeo
                         <button className={"btn btn-danger btn-sm"} onClick={copy}>Copy</button>
                     </div>
+                    <Vote/>
                 </div>
             </div>
             <hr className={"container"}/>
