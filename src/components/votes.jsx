@@ -8,21 +8,31 @@ class Vote extends React.Component {
     super(props);
     this.state = {
       count: Vote.state.totalCount,
+      upvote: false,
+      downvote: false,
     };
     this.upvote = this.upvote.bind(this);
     this.downvote = this.downvote.bind(this);
   };
 
   upvote() {
-    this.setState({
-      count: this.state.count + 1,
-    });
+    if(!this.state.upvote) {
+      this.setState({
+        count: this.state.count + 1,
+        upvote: true,
+        downvote: false
+      });
+    }
   };
 
   downvote() {
-    this.setState({
-      count: this.state.count - 1,
-    });
+    if(!this.state.downvote) {
+      this.setState({
+        count: this.state.count - 1,
+        downvote: true,
+        upvote:false,
+      });
+    }
   };
 
   componentWillUnmount() {
