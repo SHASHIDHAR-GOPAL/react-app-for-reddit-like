@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from './header';
 import 'bootstrap/dist/css/bootstrap.css';
 import {Link} from 'react-router-dom';
 import Vote from "./votes";
@@ -13,7 +12,6 @@ const NatgeoTwitter = () => {
 
     return (
         <div>
-            <Header/>
             <div id="main-content" className="container">
                 <Link to={'/links/natgeo-twitter'}>Nat Geo - Twitter</Link>
                 <div id="content" className="col-md-9 center-block"><b>Submitted by Ken</b></div>

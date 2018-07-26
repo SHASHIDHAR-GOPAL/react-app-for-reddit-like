@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from "./logo";
 import Authenticate from "./authenticate"
+import {Redirect} from "react-router-dom";
 
 class Header extends React.Component {
     constructor(props) {
@@ -13,11 +14,19 @@ class Header extends React.Component {
     }
 
     handleLogin() {
+        alert("Login via Google was successful!");
         this.setState({isUserLoggedIn: true});
     }
 
     handleLogout() {
+        alert("Logout was successful");
         this.setState({isUserLoggedIn: false});
+    }
+
+    showLinksIfUserLoggedIn() {
+        if (this.state.isUserLoggedIn)
+            return (<Redirect to={{pathname: "/links"}}/>);
+        return (<Redirect to={{pathname: "/"}}/>);
     }
 
     render() {
@@ -28,6 +37,7 @@ class Header extends React.Component {
                     <Authenticate handleLogin={this.handleLogin} handleLogout={this.handleLogout}
                                   isUserLoggedIn={this.state.isUserLoggedIn}/>
                 </div>
+                {this.showLinksIfUserLoggedIn()}
             </div>
         );
     };

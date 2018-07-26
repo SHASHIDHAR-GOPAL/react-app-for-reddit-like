@@ -11,7 +11,7 @@ const Authenticate = (props) => {
                     clientId="498131561355-sdnlg1nequidq5dru7u8e4ci1llcikqr.apps.googleusercontent.com"
                     className={"btn btn-sm btn-dark"}
                     buttonText="Login with Google"
-                    onSuccess={onLoginSuccess}
+                    onSuccess={props.handleLogin}
                     onFailure=""
                 />
             </div>
@@ -20,27 +20,13 @@ const Authenticate = (props) => {
 
     const userLoggedIn = () => {
         return (
-            <div className={"navbar-nav ml-auto"}>
+            <div className={"navbar-nav ml-auto"} style={{paddingRight: 50}}>
                 <GoogleLogout
                     className={"btn btn-sm btn-light"}
                     buttonText="Logout"
-                    onLogoutSuccess={onLogoutSuccess}
+                    onLogoutSuccess={props.handleLogout}
                 />
             </div>
-        );
-    };
-
-    const onLoginSuccess = () => {
-        alert("Login via Google was successful!");
-        return(
-            props.handleLogin
-        );
-    };
-
-    const onLogoutSuccess = () => {
-        alert("Logout was successful");
-        return(
-            props.handleLogout
         );
     };
 

@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
-import Links from './components/links';
 import NatgeoTwitter from "./components/natgeotwitter";
 import {
     BrowserRouter as Router,
     Route,
-    Switch} from 'react-router-dom';
+    Switch
+} from 'react-router-dom';
+import Header from "./components/header";
+import Links from "./components/links";
 
 class App extends Component {
     render() {
@@ -14,8 +16,8 @@ class App extends Component {
             <Router>
                 <Switch>
                     <div>
-                        <Route path={"/"} exact={true} component={Links}/>
-                        <Route path={"/links"} exact={true} component={Links}/>
+                        <Header/>
+                        <Route path={'/links'} exact={true} component={Links}/>
                         <Route path={'/links/natgeo-twitter'} exact={true} component={NatgeoTwitter}/>
                     </div>
                 </Switch>
