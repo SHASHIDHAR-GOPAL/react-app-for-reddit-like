@@ -4,7 +4,6 @@ import Vote from "./votes";
 
 const NatgeoTwitter = () => {
 
-
   function copy() {
     window.getSelection().selectAllChildren(document.getElementById("link-share"));
     document.execCommand("copy");

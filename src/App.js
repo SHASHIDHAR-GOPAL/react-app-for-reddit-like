@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom';
 import Header from "./components/header";
 import Links from "./components/links";
+import NewLink from "./components/newLink";
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
             <div>
               <Header/>
               <Route path={'/links'} exact={true} component={Links}/>
+              <Route path={'/links/new'} exact={true} component={NewLink}/>
               <Route path={'/links/natgeo-twitter'} exact={true} component={NatgeoTwitter}/>
             </div>
           </Switch>

@@ -1,7 +1,7 @@
 import React from 'react'
 import {GoogleLogin, GoogleLogout} from "react-google-login";
 import 'bootstrap/dist/css/bootstrap.css'
-import {Route} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const Authenticate = (props) => {
   const userNotLoggedIn = () => {
@@ -23,19 +23,13 @@ const Authenticate = (props) => {
         <div className={"navbar-nav ml-auto"} style={{ paddingRight: 50 }}>
           <button className={"btn btn-sm btn-light disabled"}>{props.userName}</button>
           <img src={props.profilePic} className="img-fluid rounded-circle" style={{ maxHeight: 40, maxWidth: 40 }}/>
-          <button className={"btn btn-sm btn-light"} onClick={renderFormForNewLink}>Submit link</button>
+          <Link to={"/links/new"} className={"btn btn-sm btn-light"}>Submit Link</Link>
           <GoogleLogout
               className={"btn btn-sm btn-light"}
               buttonText="Logout"
               onLogoutSuccess={props.handleLogout}
           />
         </div>
-    );
-  };
-
-  const renderFormForNewLink = () => {
-    return(
-      <Route path={'/links/new'} component={NewLink}/>
     );
   };
 
