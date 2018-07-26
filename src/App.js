@@ -10,6 +10,7 @@ import {
 import Header from "./components/header";
 import Links from "./components/links";
 import NewLink from "./components/newLink";
+import Adobe from "./components/adobe";
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
               <Route path={'/links'} exact={true} component={Links}/>
               <Route path={'/links/new'} exact={true} component={NewLink}/>
               <Route path={'/links/natgeo-twitter'} exact={true} component={NatgeoTwitter}/>
+              <Route path={'/links/adobe'} exact={true} component={Adobe}/>
             </div>
           </Switch>
         </Router>

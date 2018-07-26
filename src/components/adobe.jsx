@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Vote from "./votes";
 
-const NatgeoTwitter = () => {
+const Adobe = () => {
 
   function copy() {
     window.getSelection().selectAllChildren(document.getElementById("link-share"));
@@ -12,14 +12,14 @@ const NatgeoTwitter = () => {
   return (
       <div>
         <div id="main-content" className="container">
-          <a href="https://twitter.com/NatGeo">Nat Geo - Twitter</a>
-          <div id="content" className="col-md-9 center-block"><b>Submitted by Ken</b></div>
+          <a href="https://adobe.com">Adobe</a>
+          <div id="content" className="col-md-9 center-block"><b>Submitted by Nick</b></div>
           <div id="content" className="col-md-9 center-block">
-            <div id={"link-share"}>https://twitter.com/NatGeo
+            <div id={"link-share"}>https://adobe.com
               <button className={"btn btn-danger btn-sm"} onClick={copy}>Copy</button>
+              <pre/>
+              <Vote/>
             </div>
-            <pre/>
-            <Vote/>
           </div>
         </div>
         <hr className={"container"}/>
@@ -27,4 +27,4 @@ const NatgeoTwitter = () => {
   );
 };
 
-export default NatgeoTwitter;
+export default Adobe;
