@@ -1,14 +1,30 @@
-// import React from 'react';
-//
-// const Links = (props) => {
-//     return (
-//         <div id="main-content" className="container">
-//             <a href={"#"}>{props.message}</a>
-//             <div id="content" className="col-md-9 center-block">
-//                 {props.id}
-//             </div>
-//         </div>
-//     );
-// };
-//
-// export default Links;
+import React from 'react';
+import Home from './home';
+import NatgeoTwitter from './natgeotwitter';
+import {
+    BrowserRouter as Router,
+    Route,
+    Link,
+    Switch,
+    Redirect
+} from 'react-router-dom';
+
+const Links = () => {
+    return(
+        <div>
+            <Home/>
+            <div id="main-content" className="container">
+                <Link to={'/links/natgeo-twitter'}>Nat Geo - Twitter</Link>
+                <div id="content" className="col-md-9 center-block">Submitted by Ken</div>
+            </div>
+            <hr className={"container"}/>
+            <div id="main-content" className="container">
+                <Link to={'/links/adobe'}>Adobe</Link>
+                <div id="content" className="col-md-9 center-block">Submitted by Nick</div>
+            </div>
+            <hr className={"container"}/>
+        </div>
+    );
+};
+
+export default Links;
