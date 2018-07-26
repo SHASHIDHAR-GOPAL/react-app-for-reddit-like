@@ -1,6 +1,11 @@
 import React from 'react';
 
-const Logo = props =>
-    <a className={"logo"} href={"/"}>{props.name}</a>;
+const Logo = props => {
+  return (
+      <div className={"logo"}>
+        <a>{props.name}</a>
+      </div>
+  );
+};
 
 export default Logo;
