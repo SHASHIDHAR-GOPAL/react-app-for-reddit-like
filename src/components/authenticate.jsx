@@ -3,7 +3,6 @@ import {GoogleLogin, GoogleLogout} from "react-google-login";
 import 'bootstrap/dist/css/bootstrap.css'
 
 const Authenticate = (props) => {
-
     const userNotLoggedIn = () => {
         return (
             <div className={"navbar-nav ml-auto"} style={{paddingRight: 50}}>
@@ -21,6 +20,7 @@ const Authenticate = (props) => {
     const userLoggedIn = () => {
         return (
             <div className={"navbar-nav ml-auto"} style={{paddingRight: 50}}>
+                <button className={"btn btn-sm btn-light disabled"}>Signed in as {props.userName}</button>
                 <GoogleLogout
                     className={"btn btn-sm btn-light"}
                     buttonText="Logout"

@@ -8,14 +8,16 @@ class Header extends React.Component {
         super(props);
         this.state = {
             isUserLoggedIn: false,
+            userName: ""
         };
         this.handleLogin = this.handleLogin.bind(this);
         this.handleLogout = this.handleLogout.bind(this);
     }
 
-    handleLogin() {
+    handleLogin(response) {
         alert("Login via Google was successful!");
-        this.setState({isUserLoggedIn: true});
+        this.setState({isUserLoggedIn: true, userName: response.profileObj.name});
+        console.log(response)
     }
 
     handleLogout() {
@@ -24,8 +26,9 @@ class Header extends React.Component {
     }
 
     showLinksIfUserLoggedIn() {
-        if (this.state.isUserLoggedIn)
+        if (this.state.isUserLoggedIn){
             return (<Redirect to={{pathname: "/links"}}/>);
+        }
         return (<Redirect to={{pathname: "/"}}/>);
     }
 
@@ -35,7 +38,7 @@ class Header extends React.Component {
                 <div className={"navbar navbar-expand-lg navbar-light bg-light"}>
                     <Logo name="chirp"/>
                     <Authenticate handleLogin={this.handleLogin} handleLogout={this.handleLogout}
-                                  isUserLoggedIn={this.state.isUserLoggedIn}/>
+                                  isUserLoggedIn={this.state.isUserLoggedIn} userName={this.state.userName}/>
                 </div>
                 {this.showLinksIfUserLoggedIn()}
             </div>
