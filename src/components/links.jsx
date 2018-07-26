@@ -1,6 +1,4 @@
 import React from 'react';
-import Home from './home';
-import NatgeoTwitter from './natgeotwitter';
 import {
     BrowserRouter as Router,
     Route,
@@ -8,6 +6,7 @@ import {
     Switch,
     Redirect
 } from 'react-router-dom';
+import Home from "./home";
 
 const Links = () => {
     return(
