@@ -21,6 +21,8 @@ const Authenticate = (props) => {
         return (
             <div className={"navbar-nav ml-auto"} style={{paddingRight: 50}}>
                 <button className={"btn btn-sm btn-light disabled"}>Signed in as {props.userName}</button>
+                <img src={props.profilePic} className="img-fluid rounded-circle" style={{maxHeight: 40, maxWidth: 40}}/>
+                {console.log(props.profilePic)}
                 <GoogleLogout
                     className={"btn btn-sm btn-light"}
                     buttonText="Logout"

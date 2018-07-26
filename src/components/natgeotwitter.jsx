@@ -13,7 +13,7 @@ const NatgeoTwitter = () => {
     return (
         <div>
             <div id="main-content" className="container">
-                <Link to={'/links/natgeo-twitter'}>Nat Geo - Twitter</Link>
+                <a href="https://twitter.com/NatGeo">Nat Geo - Twitter</a>
                 <div id="content" className="col-md-9 center-block"><b>Submitted by Ken</b></div>
                 <div id="content" className="col-md-9 center-block">
                     <div id={"link-share"}>https://twitter.com/NatGeo
