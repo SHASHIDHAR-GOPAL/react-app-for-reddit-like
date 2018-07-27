@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import NatgeoTwitter from "./components/natgeotwitter";
+import Adobe from "./components/adobe";
 import {
   BrowserRouter as Router,
   Route,
@@ -10,7 +11,6 @@ import {
 import Header from "./components/header";
 import Links from "./components/links";
 import NewLink from "./components/newLink";
-import Adobe from "./components/adobe";
 
 class App extends Component {
   render() {

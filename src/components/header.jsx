@@ -22,7 +22,6 @@ class Header extends React.Component {
       userName: response.profileObj.name,
       profilePic: response.profileObj.imageUrl
     });
-    console.log(response);
   }
 
   handleLogout() {
