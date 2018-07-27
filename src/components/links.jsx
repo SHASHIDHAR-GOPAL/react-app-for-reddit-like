@@ -19,7 +19,7 @@ const Links = () => {
                 <hr className={"container"}/>
               </div>
           );
-        })};
+        })}
       </div>
   );
 };
