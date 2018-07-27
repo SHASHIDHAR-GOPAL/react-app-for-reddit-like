@@ -21,7 +21,7 @@ const Authenticate = (props) => {
   const userLoggedIn = () => {
     return (
         <div className={"navbar-nav ml-auto"} style={{ paddingRight: 50 }}>
-          <button className={"btn btn-sm btn-light disabled"}>{props.userName}</button>
+          <button className={"btn btn-sm btn-light disabled"} id={"user-name"}>{props.userName}</button>
           <img src={props.profilePic} className="img-fluid rounded-circle" style={{ maxHeight: 40, maxWidth: 40 }}/>
           <Link to={"/links/new"} className={"btn btn-sm btn-light"}>Submit Link</Link>
           <GoogleLogout

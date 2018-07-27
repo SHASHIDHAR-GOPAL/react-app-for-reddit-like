@@ -3,10 +3,11 @@ import {Link} from "react-router-dom";
 
 const NewLink = () => {
 
-  const getLink = () => {
+  const getLinkInfo = () => {
     const link_name = document.getElementById("link-name").value;
     const link_url = document.getElementById("link-url").value;
-    console.log(link_url, link_name);
+    const link_owner = document.getElementById("user-name").innerText;
+    console.log(link_url, link_name, link_owner);
   };
 
   return(
@@ -19,7 +20,7 @@ const NewLink = () => {
           <label>Link URL</label>
           <input id="link-url" type="url" className="form-control form-control-sm" placeholder="Enter URL of the link"/>
         </div>
-        <Link to={"/links"} className="btn btn-primary btn-sm" onClick={getLink} link_name={getLink.link_name}>Submit</Link>
+        <Link to={"/links"} className="btn btn-primary btn-sm" onClick={getLinkInfo}>Submit</Link>
       </form>
   );
 };
